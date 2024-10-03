@@ -1,4 +1,11 @@
 {
+  "compilerOptions": {
+    "composite": true, // 프로젝트 참조를 사용할 경우 true로 설정
+    "baseUrl": "./", // 상대 경로 기본 경로 설정
+    "paths": {
+      "@/*": ["src/*"] // '@' 별칭을 src 디렉토리에 매핑
+    }
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

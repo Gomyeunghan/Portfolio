@@ -1,22 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "target": "ES2022", // 출력할 JavaScript 버전
+    "lib": ["ES2023"], // 사용할 라이브러리
+    "module": "ESNext", // 사용할 모듈 시스템
+    "skipLibCheck": true, // 라이브러리 파일 체크 건너뛰기
+    "esModuleInterop": true, // ES 모듈과 CommonJS 모듈 간의 상호 운용성
+    "types": ["node"],
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
+    "moduleResolution": "bundler", // 모듈 해석 방식
+    "allowImportingTsExtensions": true, // TS 확장자를 포함한 가져오기 허용
+    "isolatedModules": true, // 모듈을 독립적으로 처리
+    "moduleDetection": "force", // 모듈 감지 방식
+    "noEmit": true, // 출력 파일 생성 안 함
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "strict": true, // 엄격한 타입 검사를 활성화
+    "noUnusedLocals": true, // 사용하지 않는 지역 변수 경고
+    "noUnusedParameters": true, // 사용하지 않는 매개변수 경고
+    "noFallthroughCasesInSwitch": true // switch 문에서의 fallthrough 금지
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"] // 포함할 파일
 }
