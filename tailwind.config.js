@@ -12,17 +12,6 @@ module.exports = {
       backgroundImage: {
         main: 'url("/Untitled (1).svg")',
       },
-      keyframes: {
-        star: {
-          "0%": { top: "-10vh", transform: "translateX(0px)", opacity: "1" },
-          "100%": {
-            top: "110vh",
-            transform: "translateX(-120vh)",
-            opacity: "1",
-          },
-        },
-      },
-      animation: { star: "star" },
     },
   },
   plugins: [],
