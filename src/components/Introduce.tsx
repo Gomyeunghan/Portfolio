@@ -13,9 +13,9 @@ const Introduce: React.FC<IntroduceProps> = () => {
         <div className="flex pt-10 gap-20">
           <div className="bg-gray-50 basis-1/3 rounded-full overflow-hidden aspect-square">
             <img
-              src="https://i.namu.wiki/i/vQpNtHExAd6aKFEfpcxJQ2kVVbkrIPrSrrIDo1tFuWvAWCK7Kj1BpmndwZEc8xKeh_NNQM0arWVxwZWsPDjxjpakdW5H2_FFGlCNDhTA01t76affk6mzjXEYm5y0cDsDXAf0abEGp0WsgUHIaancQA.webp"
+              src="/src/assets/beauty_1728734334504-removebg-preview.png"
               alt=""
-              className="object-cover object-center w-full h-full"
+              className="object-contain object-center w-full h-full"
             />
           </div>
           <div className="flex flex-col basis-2/3 gap-20 justify-center">

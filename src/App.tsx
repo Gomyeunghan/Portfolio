@@ -1,4 +1,4 @@
-import { motion, transform, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import MeteorEffect from "./components/MeteorEffect";
 import StackList from "./components/StackList";
 import ProjectCardList from "./components/ProjectCardList";

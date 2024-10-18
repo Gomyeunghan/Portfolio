@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Bedge from "./Bedge";
 
 interface ProjectCardProps {
@@ -12,6 +13,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description = "hh",
   img,
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const [isHover, setIsHover] = useState(false);
 
   function handleMouseOver() {
@@ -21,20 +24,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     setIsHover(false);
   }
 
-  const commonStyles = "bg-Secondery w-full h-full p-10 relative";
+  const commonStyles = "bg-Secondery w-full h-full p-10 relative rounded-xl";
 
   return (
-    <div className="text-Nomal w-full h-full p-10">
+    <motion.div className="text-Nomal w-full h-1/2 p-10 ">
       <div
         className={commonStyles}
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
+        ref={ref}
+        style={{
+          transform: isInView ? "none" : "translateX(400px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
+        }}
       >
         {/* Non-hover content */}
         <div
           className={`${
             isHover ? "opacity-0" : "opacity-100"
-          } transition-opacity duration-300 absolute inset-0 flex flex-col justify-between`}
+          } transition-opacity duration-300 absolute inset-0 flex flex-col justify-between `}
         >
           <div className="flex flex-col gap-4 p-14">
             {img && (
@@ -56,18 +65,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div
           className={`${
             isHover ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-300 absolute inset-0 p-10 flex flex-col justify-center items-center shadow-[1px_35px_60px_1px_rgba(1,1,1,1.3)] -translate-y-2`}
+          } transition-opacity duration-300 absolute inset-0 p-10 flex flex-col justify-center items-center shadow-[1px_35px_60px_1px_rgba(1,1,1,1.3)] rounded-xl`}
         >
           <h3 className="text-xl font-bold mb-6">{title}</h3>
-          <button className="bg-Primary text-white px-4 py-2 rounded mb-4">
-            깃헙 바로가기
+          <button className="bg-inherit text-white py-2 rounded mb-4 border-white border-2 px-24 hover:bg-white hover:text-Secondery transition">
+            GIT HUB 바로가기
           </button>
-          <button className="bg-Primary text-white px-4 py-2 rounded">
+          <button className="bg-inherit text-white py-2 rounded mb-4 border-white border-2 px-24 hover:bg-white hover:text-Secondery transition">
             배포주소 바로가기
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
