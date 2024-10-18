@@ -13,7 +13,7 @@ const Introduce: React.FC<IntroduceProps> = () => {
         <div className="flex pt-10 gap-20">
           <div className="bg-gray-50 basis-1/3 rounded-full overflow-hidden aspect-square">
             <img
-              src="/public/beauty_1728734334504-removebg-preview.png"
+              src="/beauty_1728734334504-removebg-preview.png"
               alt=""
               className="object-contain object-center w-full h-full"
             />
