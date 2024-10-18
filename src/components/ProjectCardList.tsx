@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 interface ProjectCardList {}
