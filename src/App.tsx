@@ -27,36 +27,34 @@ function App() {
 
   return (
     <motion.div
-      className="relative min-h-screen z-20"
+      className="relative min-h-screen z-20 overflow-hidden"
       style={{ backgroundColor }}
     >
       <div className="fixed top-0 left-0 w-full h-full z-0 ">
         <motion.div style={{ opacity }}>
           <MeteorEffect direction="right" angle={45} />
         </motion.div>
+
         <motion.div
-          className="text-Point  flex justify-center p-20 w-full h-screen items-center bg-main bg-no-repeat bg-center"
+          className="text-Point w-full h-screen items-center bg-main bg-no-repeat bg-center"
           style={{ opacity }}
-        >
-          <motion.div
-            className="font-extrabold text-9xl"
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-          >
-            <motion.h1
-              animate={{ y: [-20, 20, -20] }}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatDelay: 0,
-              }}
-            >
-              Hello world
-            </motion.h1>
-          </motion.div>
-        </motion.div>
+          animate={{ y: [-20, 20, -20] }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 0,
+          }}
+        ></motion.div>
       </div>
+      <motion.div
+        className="font-extrabold text-9xl flex justify-center items-center h-lvh w-full text-Point fixed"
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+      >
+        <motion.h1 style={{ opacity }}>Hello world</motion.h1>
+      </motion.div>
+
       <div className=" min-h-screen"> </div>
       <div className="relative z-10">
         <Introduce />

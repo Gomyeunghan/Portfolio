@@ -51,7 +51,7 @@ const Career: React.FC<CareerProps> = ({ careerData }) => {
 
   return (
     <motion.div
-      className="p-10 h-lvh bg-inherit"
+      className="p-10 h-lvh bg-inherit scroll-none"
       ref={containerRef}
       initial={{ opacity: 0, x: -400 }}
       animate={{
