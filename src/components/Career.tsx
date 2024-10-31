@@ -51,13 +51,17 @@ const Career: React.FC<CareerProps> = ({ careerData }) => {
 
   return (
     <motion.div
-      className="p-10 h-lvh bg-inherit scroll-none"
+      className="p-10 bg-inherit scroll-none"
       ref={containerRef}
       initial={{ opacity: 0, x: -400 }}
       animate={{
         opacity: isContainerInView ? 1 : 0,
         x: isContainerInView ? 0 : -400,
-        transition: { duration: 0.9, ease: [0.17, 0.55, 0.55, 1], delay: 0.1 },
+        transition: {
+          duration: 0.9,
+          ease: [0.17, 0.55, 0.55, 1],
+          delay: 0.1,
+        },
       }}
     >
       <div className="text-Point font-bold leading-normal [text-shadow:_5px_5px_0_white] text-7xl rounded-3xl bg-Secondery inline px-24 py-2">
