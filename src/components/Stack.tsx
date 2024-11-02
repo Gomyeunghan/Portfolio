@@ -10,10 +10,10 @@ const Stack: React.FC<StackProps> = ({ technology }) => {
 
   return (
     <motion.div
-      className="border-Point text-Nomal border-4  bg-Primary rounded-xl basis-1/3  w-1/2"
+      className="border-Point text-Nomal border-4  bg-Primary rounded-xl basis-1/3  w-1/2 relative max-md:w-full"
       ref={scrollRef}
       style={{
-        transform: isInView ? "none" : "translateX(-400px)",
+        transform: isInView ? "none" : "translateX(-100px)",
         opacity: isInView ? 1 : 0,
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
       }}

@@ -32,7 +32,7 @@ const CareerItem: React.FC<{ data: CareerItems; index: number }> = ({
   return (
     <motion.li
       ref={ref}
-      className="p-2 text-lg border-b-[1px] border-Point mr-[50%] flex justify-between items-center"
+      className="p-2 text-lg border-b-[1px] border-Point mr-[50%] flex justify-between items-center max-md:w-full"
       variants={itemVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}

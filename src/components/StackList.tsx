@@ -45,7 +45,7 @@ const StackList: React.FC<StackListProps> = () => {
   ];
 
   return (
-    <div className="bg-inherit  flex flex-wrap gap-9 justify-center p-20 w-full">
+    <div className="bg-inherit flex flex-wrap gap-9 justify-center p-20 w-full max-md:flex-col">
       {technologyStacks.map((teck, index) => {
         return <Stack technology={teck} key={index} />;
       })}

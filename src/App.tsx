@@ -18,11 +18,13 @@ function App() {
     ["1 ", "1", "0", "0"]
   );
   const careerData = [
-    { compony: "아이위즈", year: "2020.01.01" },
-    { compony: "아이위즈", year: "2020.01.01" },
-    { compony: "아이위즈", year: "2020.01.01" },
-    { compony: "아이위즈", year: "2020.01.01" },
-    { compony: "아이위즈", year: "2020.01.01" },
+    { compony: "한국맥도날드유한회사(A)", year: "2016. 04 ~ 2016. 07" },
+    { compony: "강화작은영화관사회적협동조합", year: "2016. 08 ~ 2016. 08" },
+    { compony: "강화군청(민원지적과-지가조사팀)", year: "2017. 01 ~ 2017. 08" },
+    { compony: "(주)우리엔유", year: "2020. 04 ~ 2020. 05" },
+    { compony: "투썸플레이스인천강화점", year: "2020. 08 ~ 2021. 06" },
+    { compony: "주식회사아이위즈", year: "2021. 09 ~ 2023. 05" },
+    { compony: "주식회사더블유아이엘", year: "2023. 06 ~ 2024. 03" },
   ];
 
   return (
@@ -52,7 +54,12 @@ function App() {
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
       >
-        <motion.h1 style={{ opacity }}>Hello world</motion.h1>
+        <motion.h1
+          className="whitespace-nowrap max-md:text-6xl"
+          style={{ opacity }}
+        >
+          Hello world
+        </motion.h1>
       </motion.div>
 
       <div className=" min-h-screen"> </div>

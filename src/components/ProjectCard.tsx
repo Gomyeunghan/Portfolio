@@ -25,15 +25,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const cardVariants = {
     hidden: {
       opacity: 0,
-      x: -100, // 왼쪽에서 시작
-      scale: 0.9, // 약간 축소된 상태에서 시작
+      x: 200, // 왼쪽에서 시작
+      scale: 1, // 약간 축소된 상태에서 시작
     },
     visible: {
       opacity: 1,
       x: 0, // 원래 위치로 이동
       scale: 1, // 원래 크기로 확대
       transition: {
-        duration: 0.7, // 애니메이션 지속 시간
+        duration: 0.5, // 애니메이션 지속 시간
         ease: "easeOut", // 부드러운 감속 효과
       },
     },
@@ -99,7 +99,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       whileInView="visible"
       viewport={{ amount: 0.5 }} // 뷰포트의 20%가 보일 때 애니메이션 트리거
       // 호버 애니메이션 설정
-      className="flex flex-col bg-Secondery justify-between w-[calc(50%-24px)] p-10 rounded-xl h-[calc(50lvh)] cursor-pointer overflow-hidden"
+      className="flex flex-col bg-Secondery justify-between w-[calc(50%-24px)] p-10 rounded-xl h-[calc(50lvh)] cursor-pointer overflow-hidden max-md:w-3/4 max-md:justify-center max-md:flex max-md:m-auto"
       whileHover="hover"
       onHoverStart={() => setIsHover(true)}
       onHoverEnd={() => setIsHover(false)}
